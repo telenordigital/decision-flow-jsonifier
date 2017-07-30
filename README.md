@@ -24,5 +24,9 @@ order to perform a conversion to Json, do the following:
 	
 	# java -jar target/decision-flow-jsonifier.jar -visualparadigm path/to/xmi > path/to/json
 
+Now, you can use JsonDescriber to load the diagram rather than VisualParadigm:
 
+	DecisionFlowDescriber describer = JsonDescriber.getInstance(
+                    new String(Files.readAllBytes(Paths.get("path/to/json"))));
+    DecisionMachine decisionMachine = DecisionFlow.getInstance(describer);
 
