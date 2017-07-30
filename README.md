@@ -13,12 +13,16 @@ Hence the utility.
 
 ## How to go about?
 
-Clone this repo, cd to its local directory, build and execute it once:
+Clone this repo, cd to its local directory and build it:
 
 	# git clone <url to this repo>
 	# cd decision-flow-jsonifier
 	# mvn package
-	# java -jar target/decision-flow-jsonifier.jar
 	
-Follow the instructions from the usage output.
+Suppose you have exported a Visual Paradigm decision diagram to a file in XMI format. In 
+order to perform a conversion to Json, do the following:
+	
+	# java -jar target/decision-flow-jsonifier.jar -visualparadigm path/to/xmi > path/to/json
+
+
 
